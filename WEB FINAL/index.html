@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enole</title>
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=League+Spartan:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <div class="dragon-container">
+        <img class="responsive-image" src="./Recursos/dragon__amarillo__largo.jpeg" alt="Dragon artwork" >
+        <!-- Header dentro del contenedor -->
+        <header class="header">
+            <h1 class="header__title">Enole</h1>
+            <p class="header__description">I am Maria F. Gaviria, studying graphic design in the 4th semester,
+                specializing in vectorization of animals, scenarios, and flyers.</p>
+            <!-- Index Button -->
+            <button class="header__button" id="toggleButtons" onclick="toggleButtons()">
+                <span class="button-text">Index</span>
+                <img class="header__arrow" src="./Recursos/flechita__sin__palito.svg" alt="arrow">            
+            </button>
+        </header>
+        <!-- Index Buttons -->
+        <div class="buttons-container" id="additionalButtons">
+            <button class="button" onclick="scrollToSection('myStory')">My Story</button>
+            <button class="button" onclick="scrollToSection('Works')">Works</button>
+            <button class="button" onclick="scrollToSection('about')">about</button>
+            <button class="button" onclick="scrollToSection('seePlans')">See Plans</button>
+            <button class="button" onclick="scrollToSection('worksSpace')">Workspace</button>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img src="./Recursos/logo.jpeg" alt="Logo" class="navbar__logo-img">
+            <span class="navbar__brand">Enole@rt</span>
+        </div>
+        <div class="navbar__buttons-container">
+            <button class="navbar__button" onclick="scrollToSection('myStory')">My Story</button>
+            <button class="navbar__button" onclick="scrollToSection('Works')">Works</button>
+            <button class="navbar__button" onclick="scrollToSection('about')">about</button>
+            <button class="navbar__button" onclick="scrollToSection('seePlans')">See Plans</button>
+            <button class="navbar__button" onclick="scrollToSection('worksSpace')">Workspace</button>
+        </div>
+    </nav>
+    <!-- Secciones que se mostrarán al hacer scroll -->
+    <div class="box myStory" id="myStory">
+        <div class="left-container">
+            <div class="slider">
+                <img src="./Recursos/carta__mujer.jpeg" alt="Image 1">
+                <img src="./Recursos/carta__dorada.jpeg" alt="Image 2">
+                <img src="./Recursos/carta__alas.jpeg" alt="Image 3">
+            </div>
+            <div class="slider">
+                <img src="./Recursos/carta__cancervero.jpeg" alt="Image 1">
+                <img src="./Recursos/carta__inframundo.jpeg" alt="Image 2">
+                <img src="./Recursos/carta__mano.jpeg" alt="Image 3">
+            </div>
+        </div>
+        <!-- Contenedor principal -->
+        <div class="content">
+            <!-- Título centrado -->
+            <h1>I am a graphic designer</h1>
+            <!-- Párrafo principal -->
+            <p class="description">
+                I love creating unique characters and settings full of life. My goal is to shape your ideas
+                and transform them into visual designs that tell a story. If you have a project in mind,
+                we will be happy to help you make it a reality with creativity and detail.
+            </p>
+            <!-- Texto final a la derecha -->
+            <p class="right-text">What would you like <br> to create together?</p>
+        </div>
+        <!-- logo -->
+        <div class="yellow-box">
+            <img src="./Recursos/logoamarillo.jpeg" alt="Enole@rt Logo" class="logo">
+        </div>
+    </div>
+
+    <div class="box works" id="works">
+        <div class="works-container">
+            <!-- Primer carrusel -->
+            <div class="carrusel carrusel-visible" id="carrusel1">
+                <img src="./Recursos/chimuelo__de__frente.jpg" alt="Imagen base" class="image">
+                <img src="./Recursos/chimuelo__de__lado.jpg" alt="Image 1">
+                <img src="./Recursos/caos__mancha.jpg" alt="Image 2">
+                <img src="./Recursos/caos__manos.jpg" alt="Image 3">
+                <img src="./Recursos/caos__cara__del__señor.jpg" alt="Image 4">
+            </div>
+            <!-- Segundo carrusel -->
+            <div class="carrusel carrusel-hidden" id="carrusel2">
+                <img src="./Recursos/primera__communion__lupe.jpeg" alt="Imagen superpuesta 2" class="overlay-image">
+                <img src="./Recursos/prinera__comunion__mama.jpeg" alt="Image 1">
+                <img src="./Recursos/tarjera__pri__cominion.jpeg" alt="Image 2">
+                <img src="./Recursos/dragon__amarillo__largo.jpeg" alt="Image 3">
+                <img src="./Recursos/navidad.jpeg" alt="Image 4">
+            </div>
+            <!-- Tercer carrusel -->
+            <div class="carrusel carrusel-hidden" id="carrusel3">
+                <img src="./Recursos/primera__communion__lupe.jpeg" alt="Imagen superpuesta 2" class="overlay-image">
+                <img src="./Recursos/prinera__comunion__mama.jpeg" alt="Image 1">
+                <img src="./Recursos/tarjera__pri__cominion.jpeg" alt="Image 2">
+                <img src="./Recursos/bingo.jpeg" alt="Image 3">
+                <img src="./Recursos/cumpleaños.jpeg" alt="Image 4">
+            </div>
+            <div class="button-container">
+                <!-- Botón 1 -->
+                <button class="rounded-button button-1" onclick="showCarousel(0)">
+                    <img src="./Recursos/personaje.jpeg" alt="Ícono 1" class="icon">
+                </button>
+                <!-- Botón 2 -->
+                <button class="rounded-button button-2" onclick="showCarousel(1)">
+                    <img src="./Recursos/montañas.png" alt="Ícono 2" class="icon">
+                </button>
+                <!-- Botón 3 -->
+                <button class="rounded-button button-3" onclick="showCarousel(2)">
+                    <img src="./Recursos/hojas.png" alt="Ícono 3" class="icon">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="box about" id="about">
+        <h1>About</h1>
+        <div class="info-container">
+            <div class="info-box">
+                <p><strong>Name</strong></p>
+            </div>
+            <p>Maria Fernanda Gaviria Amel</p>
+
+            <div class="info-box">
+                <p><strong>Birthday</strong></p>
+            </div>
+            <p>12/12/2003 <span>(20 years)</span></p>
+
+            <div class="info-box">
+                <p><strong>Role Model</strong></p>
+            </div>
+            <p>Chris Sanders (creator of Stitch)</p>
+
+            <div class="info-box">
+                <p><strong>E-mail</strong></p>
+            </div>
+            <p>maria.gaviria@uae.edu.co</p>
+
+            <div class="info-box">
+                <p><strong>Location</strong></p>
+            </div>
+            <p>Barranquilla</p>
+
+            <div class="info-box">
+                <p><strong>Tools</strong></p>
+            </div>
+            <p>Adobe (Illustrator, InDesign, After Effects, Photoshop) </p>
+            <p> 3D MAX </p>
+            <p> Figma </p>
+            <p> Visual Studio Code </p>
+            <p> Krita</p>
+        </div>
+    </div>
+    <div class="seePlans" id="seePlans">
+        <!-- Contenedor de los cuadros -->
+        <div class="plan-container">
+            <!-- Primer cuadro: Ilustraciones -->
+            <div class="plan-box">
+                <h3 class="plan-title">Arte Salvaje</h3>
+                <p class="plan-info"><strong>Incluye:</strong></p>
+                <p class="plan-details">
+                    Ilustraciones de animales en formato digital o impreso.<br>
+                    2 propuestas iniciales y hasta 3 rondas de correcciones.<br>
+                    Entrega en JPG, PNG, y PDF.
+                </p>
+                <p class="plan-info"><strong>Tiempo estimado de entrega:</strong> <span class="plan-details">7 días
+                        hábiles.</span></p>
+                <p class="plan-info"><strong>Precio:</strong> <span class="highlight">Desde $150,000 COP.</span></p>
+            </div>
+            <!-- Segundo cuadro: Animaciones -->
+            <div class="plan-box">
+                <h3 class="plan-title">"Fauna en Movimiento"</h3>
+                <p class="plan-info"><strong>Incluye:</strong></p>
+                <p class="plan-details">
+                    Animaciones de animales en formato 2D con movimientos básicos.<br>
+                    Duración: hasta 10 segundos.<br>
+                    2 propuestas iniciales y hasta 3 rondas de corrección.<br>
+                    Entrega en formatos MP4 y GIF, optimizado.
+                </p>
+                <p class="plan-info"><strong>Tiempo estimado de entrega:</strong> <span class="plan-details">12 días
+                        hábiles.</span></p>
+                <p class="plan-info"><strong>Precio:</strong> <span class="highlight">Desde $300,000 COP.</span></p>
+            </div>
+            <!-- Tercer cuadro: Otro Título -->
+            <div class="content-box">
+                <img src="./Recursos/caos__manos.jpg" alt="Imagen">
+            </div>
+        </div>
+    </div>
+    <div class="box worksSpace" id="worksSpace">
+        <div class="info-container">
+            <div class="info-box">
+                <p><strong>e-mail</strong></p>
+            </div>
+            <p>Maria.gaviria1@uac.edu.co</p>
+            <div class="info-box">
+                <p><strong>whatsapp</strong></p>
+            </div>
+            <p>3137875655</p>
+            <div class="info-box">
+                <p><strong>instagram</strong></p>
+            </div>
+            <p>Enole@rt</p>
+        </div>
+    </div>
+        <script src="./es/app.js"></script>
+    </body>
+</html>
